@@ -148,5 +148,5 @@ func (t *SimpleChaincode) create_customer(stub *shim.ChaincodeStub, args []strin
 	}
 
 	fmt.Println("- end create customer")
-	return str, nil
+	return nil, nil
 }
