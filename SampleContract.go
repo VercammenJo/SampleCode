@@ -141,7 +141,7 @@ func (t *SimpleChaincode) create_customer(stub *shim.ChaincodeStub, args []strin
 	}
 	
 
-	str := `{"name": "` + args[0] + `", "surname": "` + args[1] + `", "address": "` + args[2]  + `, "city": "` + args[3]+ `" + `, "country": "` + args[4]+ `"}`
+	str := `{"name": "` + args[0] + `", "surname": "` + args[1] + `", "address": "` + args[2]  + `, "city": "` + args[3]+  `, "country": "` + args[4]+ `"}`
 	err = stub.PutState(args[0], []byte(str))								//store marble with id as key
 	if err != nil {
 		return nil, err
