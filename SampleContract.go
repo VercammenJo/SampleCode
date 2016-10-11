@@ -3,11 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
-	"strings"
-
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
- // 	"strconv"  "encoding/json"
+ // "strings"	"strconv"  "encoding/json"
 
 // SimpleChaincode example simple Chaincode implementation
 type SimpleChaincode struct {
