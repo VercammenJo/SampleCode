@@ -61,8 +61,8 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 		return t.Init(stub, "init", args)
 	} else if function == "create_customer" {							   	//Creates a customer
 		return t.create_customer(stub, args)
-	} else if function == "update_customer" {											//writes a value to the chaincode state
-		return t.update_customer(stub, args)
+	//} else if function == "update_customer" {											//writes a value to the chaincode state
+	//	return t.update_customer(stub, args)
 	//} else if function == "init_Document" {									//create a new Document
 	//	return t.init_Document(stub, args)
 	//} else if function == "set_user" {										//change owner of a marble
