@@ -120,13 +120,13 @@ func (t *SimpleChaincode) delete_customer(stub *shim.ChaincodeStub, args []strin
 	}
 
 	name = args[0]
-	valAsbytes, err := stub.DelState(name)									//get the var from chaincode state
+	err := stub.DelState(name)									//get the var from chaincode state
 	if err != nil {
 		jsonResp = "{\"Error\":\"Failed to get state for " + name + "\"}"
 		return nil, errors.New(jsonResp)
 	}
 
-	return valAsbytes, nil													//send it onward
+	return nil, nil													//send it onward
 }
 
 
