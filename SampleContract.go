@@ -112,20 +112,17 @@ func (t *SimpleChaincode) read_customer(stub *shim.ChaincodeStub, args []string)
 // ============================================================================================================================
 
 func (t *SimpleChaincode) delete_customer(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
-	var name, jsonResp string
-	var err error
-
 	if len(args) != 1 {
-		return nil, errors.New("Incorrect number of arguments. Expecting name of the var to delete")
+		return nil, errors.New("Incorrect number of arguments. Expecting 1")
 	}
 
-	name = args[0]
-	err := stub.DelState(name)									//get the var from chaincode state
+	A := args[0]
+
+	// Delete the key from the state in ledger
+	err := stub.DelState(A)
 	if err != nil {
-		jsonResp = "{\"Error\":\"Failed to get state for " + name + "\"}"
-		return nil, errors.New(jsonResp)
+		return nil, errors.New("Failed to delete state")
 	}
-
 	return nil, nil													//send it onward
 }
 
