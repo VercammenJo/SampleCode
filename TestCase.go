@@ -247,6 +247,7 @@ func CreateIndividual (stub shim.ChaincodeStubInterface, function string, args [
 		if err != nil {
 			fmt.Println("CreateIndividual() : write error while inserting record")
 			return nil, err
+			}
 		}
 	return buff, err
 }
@@ -271,6 +272,7 @@ func UpdateIndividual (stub shim.ChaincodeStubInterface, function string, args [
 		if err != nil {
 			fmt.Println("UpdateIndividual() : write error while updating record")
 			return nil, err
+			}
 		}
 	return buff, err
 }
@@ -295,6 +297,7 @@ func CreateCompany (stub shim.ChaincodeStubInterface, function string, args []st
 		if err != nil {
 			fmt.Println("CreateCompany() : write error while inserting record")
 			return nil, err
+			}
 		}
 	return buff, err
 
@@ -320,6 +323,7 @@ func UpdateCompany (stub shim.ChaincodeStubInterface, function string, args []st
 		if err != nil {
 			fmt.Println("UpdateCompany() : write error while updating record")
 			return nil, err
+			}
 		}
 	return buff, err
 }
